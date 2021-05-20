@@ -1,0 +1,8 @@
+Putty Connection:
+localhost
+Ports: VM1 2122 and VM2 2222
+username: soc
+password: letmein
+
+VM1: 192.168.1.11
+VM2: 192.168.1.12

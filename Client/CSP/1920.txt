@@ -1,0 +1,82 @@
+1920
+Q1
+
+GET / HTTP/1.1\r\nHost: www.tudublin.ie\r\nConnection: close\r\n\r\n
+
+
+1819
+Q2.
+(i)
+Semantics would describes the interaction between the
+client and the server:
+	– Essentially this relates to the sequence of request/response messages,
+	– More usefully this can be described as “who talks first” i.e. which side issues the first message.
+(ii)
+Syntax describes the structure of the requestresponse messages. also describe it
+
+(iii)
+
+GET / HTTP/1.1\r\nHost: www.dit.ie\r\n\r\n
+
+if was successfull the respornse would be like:
+
+HTTP/1.1 200 file found\r\n
+Content-length:2340\r\n\r\n
+
+Q3
+
+(i)
+
+X:       MAC:Src/Dst IP Address:Src/Dst Port:Src/DST DATA
+
+(iii) 
+A:{200.100.0.55:1234, 147.252.10.30:80}
+
+Q5
+(b)
+server 1,2 
+client 3
+
+Q6
+Ack:A would contain 701
+Ack:B would contain 701 cuz 701-800 is lost
+D is again 701-800
+Ack:C would contain 901
+E would represent 801-900 in buffer
+F would represent 701-800 in buffer
+
+For the server: the server has 2 different types of socket, a listening socket, and a connected socket
+Explain each
+Listening socket: when does it get created? It gets created when the application boots up/
+launches the first one called is the socket primitive which is then transformed to a listening socket using the primitive listen. Listen is never closed.
+
+Connected socket(in regards to server): a connected socket is created by the call to accept, when accept is called it only returns when a connection is established, 
+the tcp entity will grab the next connection that’s in the connection queue and pass it to the application layer, 
+which calls the accept. The connection sockets lifecycle: it terminates as soon as the interaction is complete, but once its finished it will use the close() primitive to close the connection.
+
+a sockets purpose is to connect application layer to transport layer, to provide connectivity from application into the transport layer
+(first protocol layer). A socket is in effect a connection between the application layer and transport layer used for moving data across a network.
+
+
+
+
+not necesserally from apps perspective
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
